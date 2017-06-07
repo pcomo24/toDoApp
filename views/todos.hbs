@@ -1,0 +1,19 @@
+<h2>What's been done.</h2>
+<ul>
+  {{#each task}}
+    {{#if done}}
+      <li>{{description}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
+<h2>What to do...</h2>
+<ul>
+  {{#each task}}
+    {{#if done}}
+      {{else}}
+      <li>{{description}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<a href="/todos/add">Add Item</a>

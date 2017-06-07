@@ -1,0 +1,10 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+body {
+  background-color: orange;
+}
+ul li:first-child {
+  color: blue;
+}
