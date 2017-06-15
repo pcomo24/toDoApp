@@ -70,7 +70,6 @@ app.post('/submit', function(req, res, next) {
     res.redirect('/todos')
   })
   .catch(next);
-
 });
 //mark entry as done via slug in url
 app.get('/todos/done/:id', function(req, res) {
@@ -83,7 +82,7 @@ app.get('/todos/done/:id', function(req, res) {
   });
 //user login
 app.get('/login', function (req, res) {
-  response.render('login.hbs');
+  res.render('login.hbs');
 });
 app.post('/login', function (req, res) {
   var username = req.body.username;
@@ -96,6 +95,7 @@ app.post('/login', function (req, res) {
   }
 });
 //server start and connect
-app.listen(8500, function () {
-  console.log('8500 gon head witcha order')
+var PORT = process.env.PORT || 8000;
+app.listen(PORT, function () {
+  console.log('website live on port: ' + PORT);
 });
